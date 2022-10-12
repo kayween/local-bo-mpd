@@ -1,1 +1,2 @@
-# Local Bayesian Optimization via Maximizing Probability of Descent
+# Local Bayesian Optimization
+# via Maximizing Probability of Descent
