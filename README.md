@@ -1,1 +1,1 @@
-# local_bo_mpd
+# Local Bayesian Optimization via Maximizing Probability of Descent
