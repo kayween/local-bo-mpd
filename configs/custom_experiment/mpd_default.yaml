@@ -1,0 +1,74 @@
+method: mpd
+
+wandb_config:
+    project_name: zoofoo-rover
+    entity: quanwustl
+    name: mpd-iter-delta_1e-2-iso-prior-b=1-N=32
+
+out_dir: './experiments/rl_experiments/test_experiment/gibo/'  # Directory for experiment results.
+
+trials: 1
+seed: 10
+# Either choose max_iterations or max_objective_calls unequal None.
+max_iterations:
+max_objective_calls: 1000
+
+optimizer_config:
+    max_samples_per_iteration: 1
+    OptimizerTorch: sgd
+    optimizer_torch_config:
+        lr: 0.5
+    lr_schedular:
+    Model: derivative_gp
+    model_config:
+        prior_mean: 0.
+        ard_num_dims:  # If not None, each input dimension gets its own separate lengthscale.
+        N_max: 32
+        lengthscale_constraint:
+            constraint: interval
+            kwargs:
+                lower_bound: 0.0001
+                upper_bound: 10
+        lengthscale_hyperprior:
+            prior: normal
+            kwargs:
+                loc: 9
+                scale: 1
+        outputscale_constraint:
+            constraint: interval
+            kwargs:
+                lower_bound: 0.0001
+                upper_bound: 1000
+        outputscale_hyperprior:
+            prior: normal
+            kwargs:
+                loc: 5
+                scale: 1
+        noise_constraint:
+            constraint:
+            kwargs:
+        noise_hyperprior:
+            prior:
+            kwargs:
+    hyperparameter_config:
+        optimize_hyperparameters: True
+        hypers:
+            covar_module.base_kernel.lengthscale:
+            covar_module.outputscale:
+            likelihood.noise: .01
+        no_noise_optimization: True
+    optimize_acqf: bga
+    optimize_acqf_config:
+        q: 1
+        num_restarts: 16
+        raw_samples: 256
+    # Either choose bounds or delta unequal None.
+    bounds:
+        lower_bound:
+        upper_bound:
+    delta: 1
+    epsilon_diff_acq_value: 0.01
+    generate_initial_data:
+    standard_deviation_scaling: False
+    normalize_gradient: False
+    verbose: True
