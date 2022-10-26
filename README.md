@@ -1,6 +1,6 @@
 # Local Bayesian optimization via maximizing probability of descent
 
-This repository contains code for the paper [Local Bayesian optimization via maximizing probability of descent]().
+This repository contains code for the paper [Local Bayesian optimization via maximizing probability of descent](https://arxiv.org/abs/2210.11662).
 Our code implementation extends the [GIBO](https://arxiv.org/abs/2106.11899)'s codebase, and more detail can be found in [their repository](https://github.com/sarmueller/gibo).
 
 Please consider citing our paper:
