@@ -15,10 +15,11 @@ from src.synthetic_functions import (
     get_lengthscale_hyperprior,
 )
 
-import wandb
-
 
 LOG_WANDB = False
+
+if LOG_WANDB:
+    import wandb
 
 
 if __name__ == "__main__":
