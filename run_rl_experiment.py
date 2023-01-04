@@ -20,10 +20,11 @@ from src.optimizers import (
     BayesianGradientAscent,
 )
 
-import wandb
-
 
 LOG_WANDB = False
+
+if LOG_WANDB: 
+    import wandb
 
 
 if __name__ == "__main__":
