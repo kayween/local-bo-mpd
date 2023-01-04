@@ -19,7 +19,7 @@ from src.custom_functions import rover
 import wandb
 
 
-LOG_WANDB = True
+LOG_WANDB = False
 OBJECTIVE = rover
 DIM = 200
 

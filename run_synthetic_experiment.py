@@ -18,7 +18,7 @@ from src.synthetic_functions import (
 import wandb
 
 
-LOG_WANDB = True
+LOG_WANDB = False
 
 
 if __name__ == "__main__":
@@ -68,6 +68,8 @@ if __name__ == "__main__":
                 )
 
                 wandb_run.name = cfg["wandb_config"]["name"]
+            else:
+                wandb_run = None
 
             print(f"\nObjective {index_objective+1}.")
             objective = generate_objective_from_gp_post(

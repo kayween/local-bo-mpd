@@ -10,4 +10,4 @@ gym==0.9.3
 mujoco-py==0.5.7
 torch==1.6.0
 torchvision==0.7.0
-
+wandb==0.12.14

@@ -23,7 +23,7 @@ from src.optimizers import (
 import wandb
 
 
-LOG_WANDB = True
+LOG_WANDB = False
 
 
 if __name__ == "__main__":

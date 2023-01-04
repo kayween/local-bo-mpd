@@ -1,5 +1,10 @@
 method: mpd
 
+wandb_config:
+    project_name: zoofoo-synthetic
+    entity: test
+    name: mpd-iter
+
 out_dir: './experiments/synthetic_experiments/test_experiment/gibo/'
 
 # Either choose max_iterations or max_objective_calls not None.

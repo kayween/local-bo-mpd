@@ -15,8 +15,6 @@ from src.environment_api import EnvironmentObjective
 from src.acquisition_function import GradientInformation, DownhillQuadratic
 from src.model import ExactGPSEModel, DerivativeExactGPSEModel
 
-from src.utils import train_model
-
 
 class AbstractOptimizer(ABC):
     """Abstract optimizer class.
