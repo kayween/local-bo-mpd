@@ -16,10 +16,12 @@ from src.synthetic_functions import (
 )
 from src.custom_functions import rover
 
-import wandb
-
 
 LOG_WANDB = False
+
+if LOG_WANDB:
+    import wandb
+
 OBJECTIVE = rover
 DIM = 200
 
