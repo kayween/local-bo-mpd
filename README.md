@@ -17,24 +17,11 @@ Please consider citing our paper:
 Our implementation relies on mujoco-py 0.5.7 with MuJoCo Pro version 1.31.
 To install MuJoCo follow the instructions here: [https://github.com/openai/mujoco-py](https://github.com/openai/mujoco-py).
 
-### Pip
-Inside an environment with python 3.8.5 you can install all needed packages with
-```
-pip install -r requirements.txt
-```
-
 ### Conda
 Or you can create an anaconda environment called mpd using
 ```
 conda env create -f environment.yaml
 conda activate mpd
-```
-
-### Pipenv
-Or you can install and activate and environment via pipenv
-```
-pipenv install
-pipenv shell
 ```
 
 ## Usage
